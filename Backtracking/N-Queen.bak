@@ -14,7 +14,6 @@ void printQueen(vector<int> &A,int n,vector<vector<string>> &result)
             r.push_back(str);
         }
         result.push_back(r);
-	//test
     }
     
     
