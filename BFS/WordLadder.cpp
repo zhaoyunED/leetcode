@@ -16,7 +16,8 @@ Return 0 if there is no such transformation sequence.
 All words have the same length.
 
 
-int ladderLength(string start, string end, unordered_set<string> &dict) 
+ public:
+    int ladderLength(string start, string end, unordered_set<string> &dict) 
 {
 	
 	if (dict.empty() || dict.find(start) == dict.end() || dict.find(end) == dict.end()) return 0;//没找到
@@ -30,18 +31,18 @@ int ladderLength(string start, string end, unordered_set<string> &dict)
 	unordered_set<string> left_dict = dict; //保存没有被访问过的字符串
 	left_dict.erase(start);
 
-	while(queue.size()!=0)
+	while(q.size()!=0)
 	{
 		string word = q.front();
 		q.pop();
-		auto it = left_dict.beign();
-		while(it)
+		auto it = left_dict.begin();
+		while(it != left_dict.end())
 		{
 			if(oneCharDiff(*it,word))
 			{
-				visited[*it] = visited[word] + 1; //距离加1
-				if(*it == end) return visit[*it];
-				queue.push(*it); //加到队列中
+				map_visit[*it] = map_visit[word] + 1; //距离加1
+				if(*it == end) return map_visit[*it];
+				q.push(*it); //加到队列中
 				it = left_dict.erase(it);
 			}else
 			{
@@ -62,6 +63,6 @@ inline bool oneCharDiff(const string& str1, const string& str2)
 			diff++;
 		if(diff>1) break;
 	}
-	return diff == 1
+	return diff == 1;
 }
 
