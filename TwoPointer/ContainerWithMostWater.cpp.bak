@@ -6,7 +6,7 @@ Note: You may not slant the container.
 
 
 
-// two pointers
+//
 int maxArea(vector<int> &height)
 {
 	if (height.empty()) return 0;
