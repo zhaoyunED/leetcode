@@ -77,7 +77,6 @@ string longestPalindrome(string s)
 
 		while(i-1-P[i]>=0 && i+1+P[i]<t.size() && t[i+1+P[i]] ==  t[i-1-P[i]])
 			P[i]++;
-		
 		if(i+P[i]>boundary) 
 		{ // update center and boundary
                 center = i;

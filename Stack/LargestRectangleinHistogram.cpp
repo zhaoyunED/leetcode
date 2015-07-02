@@ -20,7 +20,7 @@ int largestRectangleArea(vector<int> &height)
          
         int res = 0;
         vector<int> tmp = height;
-        tmp.push_back(0);  // Important
+        tmp.push_back(0);  // Important  让 最终所有的元素出栈
  
         stack<int> s;
         for(int i = 0; i < tmp.size(); i++)
