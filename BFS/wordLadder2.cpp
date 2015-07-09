@@ -1,3 +1,26 @@
+Given two words (start and end), and a dictionary, find all shortest transformation sequence(s) from start to end, 
+such that:
+
+Only one letter can be changed at a time
+Each intermediate word must exist in the dictionary
+For example,
+
+Given:
+start = "hit"
+end = "cog"
+dict = ["hot","dot","dog","lot","log"]
+Return
+  [
+    ["hit","hot","dot","dog","cog"],
+    ["hit","hot","lot","log","cog"]
+  ]
+Note:
+All words have the same length.
+All words contain only lowercase alphabetic characters.
+
+
+
+
 //方法1 是通过不断的找可能的字符与现有比较字符的距离是否为1
 //方法2 是通过不断的剩余字典中的字符串与现有比较字符的距离是否为1，若这个字典很大话时间会很长
 //function 1
